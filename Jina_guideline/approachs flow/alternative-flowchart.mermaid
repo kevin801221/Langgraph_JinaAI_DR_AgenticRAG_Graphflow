@@ -1,0 +1,22 @@
+graph TD
+    A[START] --> B[route_input_type]
+    B -->|"URL輸入"| C[process_urls_with_reader]
+    B -->|"查詢輸入"| D[process_query_with_rag]
+    
+    C --> E[create_embeddings]
+    E --> F[store_embeddings]
+    F --> G[route_completion]
+    
+    D --> G
+    
+    G -->|"返回起始節點"| A
+    G -->|"結束會話"| H[END]
+    
+    style A fill:#5D8AA8,stroke:#333,stroke-width:2px,color:white
+    style B fill:#FF7F50,stroke:#333,stroke-width:1px,color:white
+    style C fill:#6495ED,stroke:#333,stroke-width:1px,color:white
+    style D fill:#7B68EE,stroke:#333,stroke-width:1px,color:white
+    style E fill:#9370DB,stroke:#333,stroke-width:1px,color:white
+    style F fill:#9370DB,stroke:#333,stroke-width:1px,color:white
+    style G fill:#FF7F50,stroke:#333,stroke-width:1px,color:white
+    style H fill:#4682B4,stroke:#333,stroke-width:2px,color:white

@@ -1,0 +1,20 @@
+graph TD
+    A[START] --> B[input_analyzer]
+    B --> C[task_planner]
+    C --> D[tool_selector]
+    
+    D --> E[task_executor]
+    E --> F[reflection_engine]
+    
+    F -->|"需要更多研究"| D
+    F -->|"研究完成"| G[response_generator]
+    G --> H[END]
+    
+    style A fill:#5D8AA8,stroke:#333,stroke-width:2px,color:white
+    style B fill:#6495ED,stroke:#333,stroke-width:1px,color:white
+    style C fill:#6495ED,stroke:#333,stroke-width:1px,color:white
+    style D fill:#FF7F50,stroke:#333,stroke-width:1px,color:white
+    style E fill:#7B68EE,stroke:#333,stroke-width:1px,color:white
+    style F fill:#FF7F50,stroke:#333,stroke-width:1px,color:white
+    style G fill:#8A2BE2,stroke:#333,stroke-width:1px,color:white
+    style H fill:#4682B4,stroke:#333,stroke-width:2px,color:white

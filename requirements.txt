@@ -1,0 +1,5 @@
+langgraph>=0.3.0
+httpx>=0.28.0
+pydantic>=2.0.0
+qdrant-client>=1.13.0
+graphviz>=0.20.0

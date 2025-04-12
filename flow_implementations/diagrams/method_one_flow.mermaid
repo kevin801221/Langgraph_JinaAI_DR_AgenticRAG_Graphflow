@@ -1,0 +1,35 @@
+graph TD
+    A[START] --> B[perform_deep_research]
+    B --> C[extract_additional_urls]
+    C --> D[process_urls_with_reader]
+    D --> E[create_embeddings]
+    E --> F[store_embeddings]
+    F --> G[create_final_summary]
+    G --> H[END]
+    
+    subgraph "研究階段"
+    B
+    C
+    end
+    
+    subgraph "內容處理階段"
+    D
+    end
+    
+    subgraph "向量化階段"
+    E
+    F
+    end
+    
+    subgraph "摘要階段"
+    G
+    end
+    
+    style A fill:#5D8AA8,stroke:#333,stroke-width:2px,color:white
+    style B fill:#6495ED,stroke:#333,stroke-width:1px,color:white
+    style C fill:#6495ED,stroke:#333,stroke-width:1px,color:white
+    style D fill:#7B68EE,stroke:#333,stroke-width:1px,color:white
+    style E fill:#9370DB,stroke:#333,stroke-width:1px,color:white
+    style F fill:#9370DB,stroke:#333,stroke-width:1px,color:white
+    style G fill:#8A2BE2,stroke:#333,stroke-width:1px,color:white
+    style H fill:#4682B4,stroke:#333,stroke-width:2px,color:white
